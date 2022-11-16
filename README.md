@@ -7,7 +7,7 @@ To develop a convolutional autoencoder for image denoising application.
 ## Problem Statement and Dataset
 
  The MNIST dataset, which is a simple computer vision dataset. It consists of images of handwritten digits in the form of a greyscale. It also includes 
- labels for each image, telling us which digit it is (i.e, output for each image). It means we have a labelled data in our hands to work with. 
+ labels for each image, telling us which digit it is . It means we have a labelled data in our hands to work with. 
  Each image in the MNIST dataset is 28 pixels by 28 pixels.
 
 ## DESIGN STEPS
@@ -58,9 +58,6 @@ for i in range(1, n + 1):
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 plt.show()
-```
-
-```python3
 model=Sequential([
     layers.Input(shape=(28,28,1)),
     layers.Conv2D(16, (5,5), activation='relu'),
@@ -108,5 +105,4 @@ plt.show()
 ![Screenshot (52)](https://user-images.githubusercontent.com/89703145/202248493-8870dcf9-5a27-46fd-8f2c-affd0dccbd54.png)
 
 ## RESULT
-
  Thus, we have built an autoencoder model, which can successfully clean very noisy images, which it has never seen before
